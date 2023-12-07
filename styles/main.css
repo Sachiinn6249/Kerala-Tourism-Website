@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;700&family=Roboto+Slab:wght@100;500&display=swap');
+@import './header.css';
+@import './section1.css';
+@import './section2.css';
+@import './disList.css';
+
+
+/* -------------------Global Reset--------------- */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul,li,a{
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+footer .foot{
+    background-color: #003B72;
+    color: #fff;
+}

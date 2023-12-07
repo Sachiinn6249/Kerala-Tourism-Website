@@ -1,0 +1,72 @@
+
+
+
+/* on mobile devices below 600px
+ */
+@media screen and (max-width: 600px) {
+  :root {
+    --header-height: 100px;
+    --header-height-min: 80px;
+  }
+}
+
+/* Fonts */
+:root {
+  --body-font: "Poppins", sans-serif;
+  --heading-font: "Cinzel", sans-serif;
+}
+
+
+--------------------------------------------------------------*/
+.padding-small {
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+.padding-medium {
+  padding-top: 4em;
+  padding-bottom: 4em;
+}
+
+.padding-large {
+  padding-top: 7em;
+  padding-bottom: 7em;
+}
+@media only screen and (max-width: 768px) {
+
+  .margin-small,
+  .margin-medium,
+  .margin-large {
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+}
+
+/* - Section Title
+--------------------------------------------------------------*/
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: var(--heading-font);
+}
+
+/* - Section width
+--------------------------------------------------------------*/
+.container-fluid {
+  max-width: 1540px;
+}
+
+section.district{
+  margin-top: 50px;
+}
+section.district h1{
+  margin-bottom: 40px;
+}
+.display-header,.banner-item p{
+  font-size: 20px;
+}
+footer .foot p{
+  background-color: #003B72;
+}

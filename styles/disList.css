@@ -1,0 +1,61 @@
+.district{
+    min-height: 100vh;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    margin-top: 350px;
+}
+
+.district h1 {
+    color: #003B72;
+    font-family: Amita;
+    margin: 20px auto;
+    width: 450px;
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.district img {
+    width: 450px;
+    height: 300px;
+    margin: 10px;
+    border: 10px solid #fefae0; 
+    transition-duration: 1s;
+}
+
+.district img:hover {
+    border: 5px solid #fff;
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    -webkit-filter: none;
+    filter: none;
+}
+
+.district .container1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.top{
+margin-top: 80px;
+border-top: 12px solid #003B72;
+}
+.show-dis{
+    position: relative;
+}
+.show-dis p{
+     position: absolute;
+     top:165px;
+     left: 75px;
+     font-size: 30px;
+   -webkit-text-stroke: 2px #fff;
+    background-color: transparent;
+   
+}
+.district a:hover  p{
+    transform: scale(1.4);
+    transition-duration: 1.5s;
+}
