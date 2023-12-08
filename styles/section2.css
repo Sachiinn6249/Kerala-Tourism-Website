@@ -4,6 +4,19 @@
     margin-top: 320px;
     padding: 20px 112px!important;
 }
+@media (max-width:767px){
+    .section2{
+        position: relative;
+        z-index: 80;
+        margin-top: 20px;
+    }
+    .section2 .sec-head h1{
+        color: red;
+}
+footer .foot{
+    display: none;
+}
+}
 .section2 .sec-head{
     text-align: center;
     color: #003B72;
