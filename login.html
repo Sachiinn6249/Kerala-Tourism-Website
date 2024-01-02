@@ -27,16 +27,18 @@
     <div class="cont" id="loginpage">
         <div class="form sign-in">
             <h2>Welcome</h2>
-            <label>
+            <label id="emai-label">
                 <span>Email</span>
-                <input type="email" />
+                <input type="email" class="email-id"/>
+                <span style="color: red;" id="email-span"></span>
             </label>
             <label>
                 <span>Password</span>
-                <input type="password" />
+                <input type="password" class="pass-word"/>
+                <span style="color: red;" id="password-span"></span>
             </label>
             <p class="forgot-pass">Forgot password?</p>
-            <button type="button" class="submit">Sign In</button>
+            <button type="button" class="submit signIn-btn">Sign In</button>
          
         </div>
         <div class="sub-cont">
@@ -79,5 +81,6 @@
             document.querySelector('.cont').classList.toggle('s--signup');
         });
     </script>
+    <script src=./script/main.js></script>
 </body>
 </html>

@@ -1,25 +1,52 @@
-const menuIcon = document.querySelector("#menu-icon");    
-const navbar = document.querySelector(".navbar");
-const navbg = document.querySelector(".nav-bg");
-menuIcon.addEventListener("click", () => {
-  menuIcon.classList.toggle("bx-x");
-  navbar.classList.toggle("active");
-  navbg.classList.toggle("active");
-});
 
-var image = document.getElementsByClassName('thumbnail');
-new simpleParallax(image, {
-	overflow: true
-});
+const signInBtn = document.querySelector('.signIn-btn');
+const emailOne = document.querySelector('.email-id');
+const passwordOne = document.querySelector('.pass-word');
+const emailLabel = document.getElementById('email-label');
 
-const signUpButton = document.getElementById('signUp');
-const signInButton = document.getElementById('signIn');
-const container = document.getElementById('container');
 
-signUpButton.addEventListener('click', () => {
-	container.classList.add("right-panel-active");
-});
+const emailCheck = (e) => {
+    const emailReggEx = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
+    if (emailOne.value){
+        if(!emailReggEx.test(emailOne.value)){
+            e.preventDefault();
+           const emailSpan = document.getElementById('email-span');
+           emailSpan.innerText= "Please Enter Valid Email";
+         }
+         else{
+             
+             const emailSpan = document.getElementById('email-span');
+             emailSpan.innerText= "";
+         }
+    }else{
+        const emailSpan = document.getElementById('email-span');
+        emailSpan.innerText= "";
+    }    
+}
 
-signInButton.addEventListener('click', () => {
-	container.classList.remove("right-panel-active");
-});
+const passwordCheck = () => {
+    const passwordRegEx = /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z]).{8,32}$/g;
+    if(passwordOne.value){
+        if(!passwordRegEx.test(passwordOne.value)){
+            const PasswordSpan = document.getElementById('password-span');
+            PasswordSpan.innerText = "Please Enter a Strong Password";
+        }else{
+            const PasswordSpan = document.getElementById('password-span');
+            PasswordSpan.innerText = "";
+        }
+    }else{
+        const PasswordSpan = document.getElementById('password-span');
+        PasswordSpan.innerText = "";
+    }
+   
+
+}
+
+const fullCheck = () => {
+    emailCheck();
+    passwordCheck();
+}
+
+emailOne.addEventListener('keyup',emailCheck);
+passwordOne.addEventListener('keyup',passwordCheck);
+signInBtn.addEventListener('click',fullCheck);
